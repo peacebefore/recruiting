@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import './assets/fonts/Atkinson_Hyperlegible/AtkinsonHyperlegible-Regular.ttf';
 import './assets/fonts/Thasadith/Thasadith-Regular.ttf';
 import './assets/fonts/Urbanist/Urbanist-VariableFont_wght.ttf';
 

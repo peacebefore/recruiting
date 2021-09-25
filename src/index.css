@@ -8,14 +8,6 @@ body {
 }
 
 @font-face {
-  font-family: 'AtkinsonHyperlegible';
-  src: local('AtkinstonHyperlegible'),
-    url('./assets/fonts/Atkinson_Hyperlegible/AtkinsonHyperlegible-Regular.ttf')
-      format('truetype');
-  font-weight: regular;
-}
-
-@font-face {
   font-family: 'Thasadith';
   src: local('Thasadith'),
     url('./assets/fonts/Thasadith/Thasadith-Regular.ttf') format('truetype');
