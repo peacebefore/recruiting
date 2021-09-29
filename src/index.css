@@ -2,15 +2,25 @@ html,
 body {
   width: 100%;
   height: 100%;
-  margin: 0px;
+  margin: 0px auto;
   padding: 0px;
   overflow-x: hidden;
 }
 
+html {
+  background: url('./assets/images/toby-osborn-LOG9bcvHbnQ-unsplash.jpg')
+    no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
 @font-face {
-  font-family: 'Thasadith';
-  src: local('Thasadith'),
-    url('./assets/fonts/Thasadith/Thasadith-Regular.ttf') format('truetype');
+  font-family: 'Raleway';
+  src: local('Raleway'),
+    url('./assets/fonts/Raleway/Raleway-VariableFont_wght.ttf')
+      format('truetype');
   font-weight: regular;
 }
 
@@ -18,6 +28,14 @@ body {
   font-family: 'Urbanist';
   src: local('Urbanist'),
     url('./assets/fonts/Urbanist/Urbanist-VariableFont_wght.ttf')
+      format('truetype');
+  font-weight: regular;
+}
+
+@font-face {
+  font-family: 'Open_Sans';
+  src: local('Open_Sans'),
+    url('./assets//fonts/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf')
       format('truetype');
   font-weight: regular;
 }

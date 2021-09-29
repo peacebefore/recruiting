@@ -1,10 +1,6 @@
 export default function AboutSection() {
   return (
-    <div
-      style={{
-        backgroundColor: 'purple',
-      }}
-    >
+    <div>
       <h2 style={{ fontFamily: 'Thasadith', fontSize: '3em' }}>
         About Section
       </h2>

@@ -1,20 +1,16 @@
+import { Typography } from '@mui/material';
+
 export default function ServicesOffered() {
   return (
-    <div
-      style={{
-        backgroundColor: 'orange',
-      }}
-    >
-      <h2 style={{ fontFamily: 'Thasadith', fontSize: '3em' }}>
-        Services Offered
-      </h2>
+    <div style={{ marginLeft: '10%', marginRight: '10%' }}>
+      <h2 style={{ fontFamily: 'Thasadith', fontSize: '3em' }}>Our Services</h2>
+      <Typography style={{ fontFamily: 'Urbanist', fontSize: '24px' }}>
+        Hire Employees Directly
+      </Typography>
+      <Typography>Ready to take the plunge?</Typography>
       <p style={{ fontFamily: 'Urbanist', fontSize: '24px' }}>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ac
-        venenatis urna. Pellentesque placerat nibh vitae felis lacinia, quis
-        venenatis ante aliquam. Nullam sit amet eros neque. Nulla efficitur ex
-        sed orci consequat fringilla. In semper faucibus tristique. Pellentesque
-        dictum pretium quam nec suscipit. Etiam enim dolor, feugiat scelerisque
-        libero sed, fringilla rhoncus lectus.
+        Want to test the waters before diving in? Let's Go Contract or Contract
+        to Hire.
       </p>
     </div>
   );

@@ -3,7 +3,8 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import './assets/fonts/Thasadith/Thasadith-Regular.ttf';
+import './assets/fonts/Open_Sans/OpenSans-VariableFont_wdth,wght.ttf';
+import './assets/fonts/Raleway/Raleway-VariableFont_wght.ttf';
 import './assets/fonts/Urbanist/Urbanist-VariableFont_wght.ttf';
 
 ReactDOM.render(

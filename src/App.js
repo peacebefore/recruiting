@@ -1,18 +1,12 @@
-import NavBar from './components/nav/nav';
-import HeroSection from './components/hero/hero';
-import AboutSection from './components/about/about';
-import ServicesOffered from './components/services/services';
-import ContactForm from './components/contact/contact';
+import ContactSection from './components/contact/contactforms';
 import FooterSection from './components/footer/footer';
+import HeroSection from './components/hero/hero';
 
 function App() {
   return (
     <div className='App'>
-      <NavBar />
       <HeroSection />
-      <AboutSection />
-      <ServicesOffered />
-      <ContactForm />
+      <ContactSection />
       <FooterSection />
     </div>
   );

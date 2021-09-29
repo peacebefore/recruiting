@@ -1,26 +1,28 @@
+import Typography from '@mui/material/Typography';
+import Grid from '@mui/material/Grid';
+
 export default function FooterSection() {
   return (
-    <div
+    <Grid
+      container
       style={{
-        backgroundColor: 'lightBlue',
+        display: 'flex',
+        justifyContent: 'center',
+        width: '100%',
+        height: '80px',
+        alignItems: 'center',
+        backgroundColor: 'rgba(58, 179, 196, 0.7)',
+        color: 'whitesmoke',
+        marginLeft: '4%',
+        padding: '2%',
+        marginTop: '5%',
       }}
     >
-      <h2 style={{ fontFamily: 'Thasadith', fontSize: '3em' }}>Footer</h2>
-      <p style={{ fontFamily: 'Urbanist', fontSize: '24px' }}>
-        Aliquam eu semper elit. Vestibulum finibus aliquam nibh, eget blandit
-        nisl vulputate feugiat. Quisque vehicula, elit nec lobortis tempus, est
-        massa dignissim purus, quis fermentum nibh turpis euismod magna.
-        Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec
-        dignissim lacus est, sed aliquet lectus tristique id. Duis eu odio id
-        dui placerat pretium. Suspendisse posuere ultrices ante, eget luctus
-        nisl venenatis nec. Integer sit amet fermentum enim, vel mattis eros.
-        Nam urna lacus, pretium vitae sagittis ac, dapibus sed libero. Mauris a
-        dui dui. Quisque commodo, tortor sed consectetur tincidunt, nisl libero
-        bibendum arcu, ut vestibulum orci enim in enim. Ut purus erat, varius eu
-        posuere quis, tristique ut urna. Curabitur ut nisl feugiat, aliquam
-        mauris eget, cursus erat. Phasellus lobortis tellus eget hendrerit
-        euismod.
-      </p>
-    </div>
+      <Grid item>
+        <Typography variant='caption' style={{ fontFamily: 'Open_Sans' }}>
+          Crafted by Willow Luna LLC. All Rights Reserved.
+        </Typography>
+      </Grid>
+    </Grid>
   );
 }

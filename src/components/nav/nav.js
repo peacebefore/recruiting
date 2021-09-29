@@ -1,18 +1,23 @@
+import { Grid } from '@mui/material';
+import LogoImage from '../../assets/logos/logo4.png';
+
 export default function NavBar() {
   return (
-    <div
+    <Grid
+      container
+      spacing={2}
       style={{
-        backgroundColor: 'green',
+        backgroundColor: '#ffffff',
+        opacity: '0.7',
       }}
     >
-      <h2 style={{ fontFamily: 'Thasadith', fontSize: '3em' }}>Nav Bar</h2>
-      <p style={{ fontFamily: 'Urbanist', fontSize: '24px' }}>
-        In vehicula vel eros ac elementum. Quisque sit amet cursus nunc. In
-        dignissim massa dignissim metus aliquam placerat. Vivamus aliquam dui ac
-        velit imperdiet elementum. Aenean ut massa tellus. In fringilla nulla
-        velit, non suscipit est gravida sit amet. Vestibulum at dui massa. Donec
-        vitae rutrum augue.
-      </p>
-    </div>
+      <Grid item xs={4} md={3}>
+        <img
+          src={LogoImage}
+          alt='TJFJ Sourcing'
+          style={{ width: '100%', padding: '10%' }}
+        />
+      </Grid>
+    </Grid>
   );
 }
