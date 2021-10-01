@@ -30,9 +30,8 @@ export default function HeroSection() {
           flexDirection: 'column',
           alignContent: 'center',
           justifyItems: 'center',
-          paddingTop: '10%',
-          paddingBottom: '10%',
           paddingLeft: '5%',
+          paddingRight: '5%',
         }}
       >
         <Typography
@@ -41,6 +40,8 @@ export default function HeroSection() {
             fontFamily: 'Open_Sans',
             fontWeight: 'bold',
             alignSelf: 'center',
+            paddingTop: '5%',
+            paddingBottom: '10%',
           }}
         >
           We create{' '}
@@ -67,6 +68,7 @@ export default function HeroSection() {
             fontFamily: 'Raleway',
             fontWeight: 'bold',
             alignSelf: 'center',
+            paddingBottom: '5%',
           }}
         >
           Achieve the best fit for you and your team
