@@ -1,5 +1,7 @@
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
+import Cover from '../../assets/images/cover.jpg';
+import CopyrightIcon from '@mui/icons-material/Copyright';
 
 export default function FooterSection() {
   return (
@@ -9,18 +11,25 @@ export default function FooterSection() {
         display: 'flex',
         justifyContent: 'center',
         width: '100%',
-        height: '80px',
         alignItems: 'center',
-        backgroundColor: 'rgba(58, 179, 196, 0.7)',
+        background: `url(${Cover})`,
+        backgroundPosition: 'bottom',
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: 'cover',
         color: 'whitesmoke',
-        marginLeft: '4%',
-        padding: '2%',
-        marginTop: '5%',
       }}
     >
-      <Grid item>
+      <Grid
+        item
+        style={{
+          backgroundColor: 'rgba(4, 80, 102, 0.4)',
+          width: '100%',
+          padding: '3%',
+        }}
+      >
         <Typography variant='caption' style={{ fontFamily: 'Open_Sans' }}>
-          Crafted by Willow Luna LLC. All Rights Reserved.
+          <CopyrightIcon style={{ fontSize: '1em' }} /> Crafted by Willow Luna
+          LLC. All Rights Reserved.
         </Typography>
       </Grid>
     </Grid>

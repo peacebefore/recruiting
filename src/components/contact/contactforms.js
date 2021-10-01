@@ -4,18 +4,15 @@ import Smiling from '../../assets/images/smiling.png';
 
 export default function ContactSection() {
   return (
-    <div>
+    <div id='contactform'>
       <Grid
         container
         style={{
           display: 'flex',
           flexFlow: 'row wrap',
-          justifyContent: 'space-around',
+          justifyContent: 'space-evenly',
           alignItems: 'center',
-          marginTop: '5%',
-          marginBottom: '5%',
-          marginLeft: '4%',
-          backgroundColor: 'rgba(238, 242, 246, 0.7)',
+          backgroundColor: 'rgba(238, 242, 246)',
         }}
       >
         <Grid item xs={10} md={5} lg={5}>

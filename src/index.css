@@ -7,14 +7,14 @@ body {
   overflow-x: hidden;
 }
 
-html {
+/* html {
   background: url('./assets/images/toby-osborn-LOG9bcvHbnQ-unsplash.jpg')
     no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-}
+} */
 
 @font-face {
   font-family: 'Raleway';

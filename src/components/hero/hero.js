@@ -1,97 +1,85 @@
 import LogoImage from '../../assets/logos/logo4.png';
-import { Card, Grid, Button, Typography } from '@mui/material';
+import { Card, Grid, Typography } from '@mui/material';
+import Cover from '../../assets/images/cover.jpg';
+import TextLoop from 'react-text-loop';
 
 export default function HeroSection() {
   return (
     <Grid
       container
+      display='flex'
+      justifyContent='center'
+      alignItems='center'
+      direction='row'
       sx={{
+        background: `url(${Cover})`,
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: 'cover',
+        width: '100%',
         height: '100%',
-        paddingTop: '2%',
-        paddingLeft: '4%',
-        paddingBottom: '15%',
       }}
     >
-      <Card
-        sx={{
-          backgroundColor: '#ffffff',
-          opacity: '0.7',
-          paddingLeft: '1%',
-          width: '100%',
+      <Grid item lg={12} md={12} xs={12} style={{ marginBottom: '2%' }}>
+        <img
+          src={LogoImage}
+          alt=''
+          style={{ width: '20em', zIndex: '-1', padding: '1.5%' }}
+        />
+      </Grid>
+      <Grid
+        item
+        style={{
+          paddingBottom: '5%',
+          width: '65%',
         }}
       >
         <Grid
-          container
-          display='flex'
-          justifyContent='space-between'
-          alignItems='center'
+          item
+          style={{
+            backgroundColor: 'rgba(255, 255, 255, 0.45)',
+            padding: '5%',
+          }}
         >
-          <Grid item>
-            <img
-              src={LogoImage}
-              alt=''
-              style={{ width: '20em', zIndex: '-1' }}
-            />
-          </Grid>
-          <Grid item style={{ marginRight: '2%' }}>
-            <Button variant='contained' style={{ fontSize: '1.25em' }}>
-              Contact Us
-            </Button>
-          </Grid>
+          <Typography
+            variant='h2'
+            style={{
+              fontFamily: 'Open_Sans',
+              fontWeight: 'bold',
+            }}
+          >
+            We create{' '}
+            <TextLoop
+              children={[
+                'creative',
+                'tenacious',
+                'proactive',
+                'formidable',
+                'gutsy',
+                'resourceful',
+                'scrappy',
+              ]}
+            />{' '}
+            teams
+          </Typography>
         </Grid>
-      </Card>
-      <Grid container display='flex' justifyContent='center'>
-        {' '}
         <Grid
           item
-          lg={6}
-          md={6}
-          xs={12}
           style={{
-            backgroundColor: '#ffffff',
-            opacity: '0.7',
-            marginTop: '5%',
+            backgroundColor: 'rgba(255, 255, 255, 0.45)',
+            padding: '5%',
+            paddingTop: '15%',
+            marginBottom: '10%',
           }}
         >
           <Typography
             variant='h4'
             style={{
-              paddingTop: '5%',
-              marginLeft: '8%',
-              marginRight: '5%',
               fontFamily: 'Raleway',
               fontWeight: 'bold',
             }}
           >
             Achieve the best fit for you and your team
-          </Typography>
-          <Typography
-            style={{
-              fontSize: '1.3em',
-              fontWeight: 'bold',
-              paddingTop: '5%',
-              marginLeft: '8%',
-              marginRight: '5%',
-              fontFamily: 'Open_Sans',
-            }}
-          >
-            We are a recruiting firm that works across diverse industries,
-            hiring employees directly, or on contract and contract to hire
-            basis.
-          </Typography>
-          <Typography
-            style={{
-              fontSize: '1.3em',
-              fontWeight: 'bold',
-              paddingTop: '5%',
-              marginLeft: '8%',
-              paddingBottom: '5%',
-              marginRight: '5%',
-              fontFamily: 'Open_Sans',
-            }}
-          >
-            We believe there is a space for everyone and we work hard to find
-            those who are the best fits for your roles.
           </Typography>
         </Grid>
       </Grid>

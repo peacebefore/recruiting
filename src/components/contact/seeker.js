@@ -49,7 +49,7 @@ export default function SeekerContact() {
         border: 'solid 3px',
         borderColor: 'rgba(45, 45, 45, 0.6)',
         boxShadow: '3px 3px rgba(45, 45, 45, 0.6)',
-        backgroundColor: 'rgba(32, 163, 226, 0.3)',
+        backgroundColor: 'rgba(32, 163, 226, 0.4)',
         borderRadius: '10px',
         height: '100%',
       }}
@@ -175,7 +175,7 @@ export default function SeekerContact() {
             variant='contained'
             style={{
               backgroundImage:
-                'linear-gradient(to top right, rgba(86, 199, 253), rgba(78, 253, 137), rgba(255, 237, 172), rgba(255, 185, 123))',
+                'linear-gradient(to bottom right, rgba(86, 199, 253), rgba(78, 253, 137), rgba(255, 237, 172), rgba(255, 185, 123))',
               border: '2px solid',
               borderRadius: '10px',
               fontFamily: 'Open_Sans',
