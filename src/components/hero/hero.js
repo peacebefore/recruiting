@@ -1,88 +1,77 @@
 import LogoImage from '../../assets/logos/logo4.png';
-import { Card, Grid, Typography } from '@mui/material';
+import { Grid, Typography } from '@mui/material';
 import Cover from '../../assets/images/cover.jpg';
 import TextLoop from 'react-text-loop';
 
 export default function HeroSection() {
   return (
-    <Grid
-      container
-      display='flex'
-      justifyContent='center'
-      alignItems='center'
-      direction='row'
-      sx={{
+    <div
+      style={{
         background: `url(${Cover})`,
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',
         width: '100%',
-        height: '100%',
+        paddingBottom: '5%',
       }}
     >
-      <Grid item lg={12} md={12} xs={12} style={{ marginBottom: '2%' }}>
+      <div style={{ marginBottom: '2%' }}>
         <img
           src={LogoImage}
           alt=''
-          style={{ width: '20em', zIndex: '-1', padding: '1.5%' }}
+          style={{ width: '20em', zIndex: '-1', padding: '2%' }}
         />
-      </Grid>
-      <Grid
-        item
+      </div>
+      <div
         style={{
-          paddingBottom: '5%',
-          width: '65%',
+          width: '100%',
+          backgroundColor: 'rgba(255, 255, 255, 0.45)',
+          display: 'flex',
+          flexDirection: 'column',
+          alignContent: 'center',
+          justifyItems: 'center',
+          paddingTop: '10%',
+          paddingBottom: '10%',
+          paddingLeft: '5%',
         }}
       >
-        <Grid
-          item
+        <Typography
+          variant='h2'
           style={{
-            backgroundColor: 'rgba(255, 255, 255, 0.45)',
-            padding: '5%',
+            fontFamily: 'Open_Sans',
+            fontWeight: 'bold',
+            alignSelf: 'center',
           }}
         >
-          <Typography
-            variant='h2'
-            style={{
-              fontFamily: 'Open_Sans',
-              fontWeight: 'bold',
-            }}
-          >
-            We create{' '}
-            <TextLoop
-              children={[
-                'creative',
-                'tenacious',
-                'proactive',
-                'formidable',
-                'gutsy',
-                'resourceful',
-                'scrappy',
-              ]}
-            />{' '}
-            teams
-          </Typography>
-        </Grid>
-        <Grid
-          item
+          We create{' '}
+          <TextLoop
+            children={[
+              'diverse',
+              'creative',
+              'happy',
+              'tenacious',
+              'fun',
+              'inclusive',
+              'proactive',
+              'formidable',
+              'gutsy',
+              'resourceful',
+              'scrappy',
+            ]}
+          />{' '}
+          teams
+        </Typography>
+        <Typography
+          variant='h4'
           style={{
-            backgroundColor: 'rgba(255, 255, 255, 0.45)',
-            padding: '5%',
-            paddingTop: '15%',
-            marginBottom: '10%',
+            fontFamily: 'Raleway',
+            fontWeight: 'bold',
+            alignSelf: 'center',
           }}
         >
-          <Typography
-            variant='h4'
-            style={{
-              fontFamily: 'Raleway',
-              fontWeight: 'bold',
-            }}
-          >
-            Achieve the best fit for you and your team
-          </Typography>
-        </Grid>
-      </Grid>
-    </Grid>
+          Achieve the best fit for you and your team
+        </Typography>
+      </div>
+    </div>
   );
 }
