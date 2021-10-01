@@ -30,8 +30,7 @@ export default function HeroSection() {
           flexDirection: 'column',
           alignContent: 'center',
           justifyItems: 'center',
-          paddingLeft: '5%',
-          paddingRight: '5%',
+          paddingLeft: '3%',
         }}
       >
         <Typography
