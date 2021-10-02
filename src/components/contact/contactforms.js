@@ -1,6 +1,5 @@
-import SeekerContact from './seeker';
-import { Grid } from '@mui/material';
-import Smiling from '../../assets/images/smiling.png';
+import { Grid, Typography } from '@mui/material';
+import ContactForm from './updatedForm';
 
 export default function ContactSection() {
   return (
@@ -10,26 +9,19 @@ export default function ContactSection() {
         style={{
           display: 'flex',
           flexFlow: 'row wrap',
-          justifyContent: 'space-evenly',
+          justifyContent: 'center',
           alignItems: 'center',
           backgroundColor: 'rgba(238, 242, 246)',
         }}
       >
-        <Grid item xs={10} md={5} lg={5}>
-          <img
-            src={Smiling}
-            alt=''
-            style={{ width: '100%', marginTop: '5%' }}
-          />
-        </Grid>
         <Grid
           item
           xs={10}
-          md={4}
-          lg={4}
-          style={{ marginTop: '4%', marginBottom: '4%' }}
+          md={8}
+          lg={5}
+          style={{ marginTop: '10%', marginBottom: '10%' }}
         >
-          <SeekerContact />
+          <ContactForm />
         </Grid>
       </Grid>
     </div>
