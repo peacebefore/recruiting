@@ -37,7 +37,7 @@ export default function HeroSection() {
         <Typography
           variant='h2'
           style={{
-            fontFamily: 'Open_Sans',
+            fontFamily: 'Aleo',
             fontWeight: 'bold',
             alignSelf: 'center',
             paddingTop: '5%',
@@ -65,7 +65,7 @@ export default function HeroSection() {
         <Typography
           variant='h4'
           style={{
-            fontFamily: 'Raleway',
+            fontFamily: 'Arima_Madurai',
             fontWeight: 'bold',
             alignSelf: 'center',
             paddingBottom: '5%',

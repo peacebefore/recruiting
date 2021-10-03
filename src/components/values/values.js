@@ -25,12 +25,10 @@ export default function ValuesSection() {
         }}
       >
         <Grid item lg={5}>
-          <h2 style={{ fontFamily: 'Open_Sans', fontSize: '3em' }}>
-            Our Values
-          </h2>
+          <h2 style={{ fontFamily: 'Alice', fontSize: '3em' }}>Our Values</h2>
           <Typography
             style={{
-              fontFamily: 'Raleway',
+              fontFamily: 'Aleo',
               fontSize: '24px',
               paddingBottom: '8%',
             }}
@@ -40,7 +38,7 @@ export default function ValuesSection() {
           </Typography>
           <Typography
             style={{
-              fontFamily: 'Raleway',
+              fontFamily: 'Aleo',
               fontSize: '24px',
               paddingBottom: '8%',
             }}

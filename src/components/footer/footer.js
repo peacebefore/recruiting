@@ -19,7 +19,7 @@ export default function FooterSection() {
       <Typography
         variant='caption'
         style={{
-          fontFamily: 'Open_Sans',
+          fontFamily: 'Arima_Madurai',
           fontSize: '1.1em',
           backgroundColor: 'rgba(4, 80, 102, 0.4)',
           width: '100%',

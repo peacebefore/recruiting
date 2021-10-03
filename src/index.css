@@ -7,35 +7,27 @@ body {
   overflow-x: hidden;
 }
 
-/* html {
-  background: url('./assets/images/toby-osborn-LOG9bcvHbnQ-unsplash.jpg')
-    no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-} */
-
 @font-face {
-  font-family: 'Raleway';
-  src: local('Raleway'),
-    url('./assets/fonts/Raleway/Raleway-VariableFont_wght.ttf')
-      format('truetype');
+  font-family: 'Aleo';
+  src: local('Aleo'), url('./assets/fonts/Aleo/Aleo-Regular.ttf');
   font-weight: regular;
 }
 
 @font-face {
-  font-family: 'Urbanist';
-  src: local('Urbanist'),
-    url('./assets/fonts/Urbanist/Urbanist-VariableFont_wght.ttf')
-      format('truetype');
+  font-family: 'Alice';
+  src: local('Alice'), url('./assets/fonts/Alice/Alice-Regular.ttf');
   font-weight: regular;
 }
 
 @font-face {
-  font-family: 'Open_Sans';
-  src: local('Open_Sans'),
-    url('./assets//fonts/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf')
-      format('truetype');
+  font-family: 'Amaranth';
+  src: local('Amaranth'), url('./assets/fonts/Amaranth/Amaranth-Regular.ttf');
+  font-weight: regular;
+}
+
+@font-face {
+  font-family: 'Arima_Madurai';
+  src: local('Arima_Madurai'),
+    url('./assets/fonts/Arima_Madurai/ArimaMadurai-Regular.ttf');
   font-weight: regular;
 }

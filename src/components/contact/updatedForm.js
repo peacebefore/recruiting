@@ -59,7 +59,10 @@ export default function FormPropsTextFields() {
       autoComplete='off'
     >
       <div>
-        <Typography variant='h3' style={{ marginBottom: '3%' }}>
+        <Typography
+          variant='h3'
+          style={{ marginBottom: '3%', fontFamily: 'Arima_Madurai' }}
+        >
           Contact Us
         </Typography>
       </div>
@@ -163,13 +166,12 @@ export default function FormPropsTextFields() {
               size='large'
               color='inherit'
               style={{
-                fontFamily: 'Raleway',
+                fontFamily: 'Aleo',
                 color: 'rgba(3, 97, 119)',
                 backgroundColor: 'rgba(255, 255, 255)',
                 fontSize: '1.1em',
                 paddingTop: '3%',
                 paddingBottom: '3%',
-                fontWeight: 'bold',
                 borderRadius: '5px',
                 borderWidth: '2px',
               }}

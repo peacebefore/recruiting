@@ -3,9 +3,10 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import './assets/fonts/Open_Sans/OpenSans-VariableFont_wdth,wght.ttf';
-import './assets/fonts/Raleway/Raleway-VariableFont_wght.ttf';
-import './assets/fonts/Urbanist/Urbanist-VariableFont_wght.ttf';
+import './assets/fonts/Aleo/Aleo-Regular.ttf';
+import './assets/fonts/Alice/Alice-Regular.ttf';
+import './assets/fonts/Amaranth/Amaranth-Regular.ttf';
+import './assets/fonts/Arima_Madurai/ArimaMadurai-Regular.ttf';
 
 ReactDOM.render(
   <React.StrictMode>
