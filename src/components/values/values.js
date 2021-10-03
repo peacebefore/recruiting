@@ -6,15 +6,15 @@ export default function ValuesSection() {
     <div
       style={{
         height: '100%',
-        backgroundImage:
-          'linear-gradient(to top right, rgba(10, 199, 253), rgba(78, 253, 137, 0.65), rgba(255, 185, 123, 0.8))',
+        marginTop: '7%',
+        marginBottom: '3%',
       }}
     >
       <Grid
         container
         style={{
-          backgroundColor: '',
-          color: 'rgba(31, 57, 98)',
+          backgroundColor: 'rgba(31, 57, 98, 0.65)',
+          color: 'rgba(255, 255, 255)',
           height: '100%',
           paddingLeft: '8%',
           paddingRight: '8%',
@@ -50,7 +50,15 @@ export default function ValuesSection() {
             basis.
           </Typography>
         </Grid>
-        <Grid item lg={6} style={{ width: '600px' }}>
+        <Grid
+          item
+          lg={6}
+          style={{
+            width: '600px',
+            backgroundColor: 'rgba(255, 255, 255, 0.9)',
+            padding: '1%',
+          }}
+        >
           <img
             src={Smiling}
             alt='smiling people of diverse backgrounds'

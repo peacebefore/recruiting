@@ -23,7 +23,9 @@ export default function FooterSection() {
           fontSize: '1.1em',
           backgroundColor: 'rgba(4, 80, 102, 0.4)',
           width: '100%',
-          padding: '5%',
+          paddingTop: '5%',
+          paddingBottom: '2%',
+          paddingLeft: '2%',
           alignSelf: 'center',
         }}
       >

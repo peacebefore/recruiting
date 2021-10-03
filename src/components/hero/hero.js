@@ -1,7 +1,8 @@
 import LogoImage from '../../assets/logos/logo4.png';
-import { Grid, Typography } from '@mui/material';
+import { Typography } from '@mui/material';
 import Cover from '../../assets/images/cover.jpg';
 import TextLoop from 'react-text-loop';
+import ValuesSection from '../values/values';
 
 export default function HeroSection() {
   return (
@@ -15,7 +16,7 @@ export default function HeroSection() {
         paddingBottom: '5%',
       }}
     >
-      <div style={{ marginBottom: '2%' }}>
+      <div style={{ marginBottom: '4%' }}>
         <img
           src={LogoImage}
           alt=''
@@ -72,6 +73,9 @@ export default function HeroSection() {
         >
           Achieve the best fit for you and your team
         </Typography>
+      </div>
+      <div>
+        <ValuesSection />
       </div>
     </div>
   );
