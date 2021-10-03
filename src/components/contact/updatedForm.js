@@ -53,10 +53,11 @@ export default function FormPropsTextFields() {
     <Box
       component='form'
       sx={{
-        '& .MuiTextField-root': { m: 1 },
+        '& .MuiTextField-root': { m: 0.5 },
       }}
       noValidate
       autoComplete='off'
+      style={{ paddingLeft: '4%' }}
     >
       <div>
         <Typography
@@ -155,9 +156,9 @@ export default function FormPropsTextFields() {
         <Grid item lg={12} md={12} xs={12}>
           <div
             style={{
-              width: '50%',
+              width: '55%',
               marginTop: '3%',
-              marginLeft: '20%',
+              marginLeft: '18%',
             }}
           >
             <Button
