@@ -65,8 +65,7 @@ export default function HeroSection() {
         <Typography
           variant='h4'
           style={{
-            fontFamily: 'Arima_Madurai',
-            fontWeight: 'bold',
+            fontFamily: 'Amaranth',
             alignSelf: 'center',
             paddingBottom: '5%',
           }}

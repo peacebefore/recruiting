@@ -1,5 +1,5 @@
 import { Grid } from '@mui/material';
-import ContactForm from './updatedForm';
+import ContactUs from './contact';
 
 export default function ContactSection() {
   return (
@@ -33,7 +33,7 @@ export default function ContactSection() {
             backgroundColor: 'rgba(255, 255, 255, 0.65)',
           }}
         >
-          <ContactForm />
+          <ContactUs />
         </Grid>
       </Grid>
     </div>
