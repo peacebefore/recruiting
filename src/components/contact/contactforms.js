@@ -1,5 +1,5 @@
 import { Grid } from '@mui/material';
-import ContactUs from './contact';
+import ContactWithValidation from './contact';
 
 export default function ContactSection() {
   return (
@@ -14,26 +14,17 @@ export default function ContactSection() {
         container
         style={{
           display: 'flex',
-          flexFlow: 'row wrap',
           justifyContent: 'center',
           alignItems: 'center',
         }}
       >
         <Grid
           item
-          xs={10}
-          md={8}
-          lg={8}
           style={{
-            marginTop: '3%',
-            paddingTop: '3%',
-            paddingBottom: '3%',
-            marginBottom: '3%',
-            paddingLeft: '3%',
-            backgroundColor: 'rgba(255, 255, 255, 0.65)',
+            width: '75%',
           }}
         >
-          <ContactUs />
+          <ContactWithValidation />
         </Grid>
       </Grid>
     </div>

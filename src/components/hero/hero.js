@@ -48,7 +48,6 @@ export default function HeroSection() {
           <TextLoop
             children={[
               'diverse',
-              'creative',
               'happy',
               'tenacious',
               'fun',

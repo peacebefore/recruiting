@@ -1,136 +1,245 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { Form } from 'react-final-form';
-import { TextField, showErrorOnBlur } from 'mui-rff';
-import { Typography, Paper, Grid, Button, CssBaseline } from '@mui/material';
-import { makeValidate } from 'mui-rff';
+import { makeRequired, makeValidate } from 'mui-rff';
 import * as Yup from 'yup';
+import emailjs from 'emailjs-com';
+
+//mui components
+import Grid from '@mui/material/Grid';
+import Button from '@mui/material/Button';
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+import { TextField } from 'mui-rff';
+import { CssBaseline } from '@mui/material';
+
+//icons
+import BusinessCenterRoundedIcon from '@mui/icons-material/BusinessCenterRounded';
+import SubjectRoundedIcon from '@mui/icons-material/SubjectRounded';
+import LocalPhoneRoundedIcon from '@mui/icons-material/LocalPhoneRounded';
+import EmailRoundedIcon from '@mui/icons-material/EmailRounded';
+import AccountBoxRoundedIcon from '@mui/icons-material/AccountBoxRounded';
+import SendRoundedIcon from '@mui/icons-material/SendRounded';
+import ClearRoundedIcon from '@mui/icons-material/ClearRounded';
 
 const phoneRegExp =
-  /^[+]?1?[\s-]?[(.]?[\s]?[0-9]{3}[).-]?[\s]?[0-9]{3}[-\s.]?[0-9]{4}$/;
+  '^[+]?1?[s-]?[(.]?[s]?[0-9]{3}[).-]?[s]?[0-9]{3}[-s.]?[0-9]{4}$';
 
+// We define our schema based on the same keys as our form:
 const schema = Yup.object().shape({
-  name: Yup.string().required('Required'),
-  email: Yup.string().email('Please enter a valid email.').required('Required'),
+  fullName: Yup.string().required('Required'),
   phone: Yup.string()
     .matches(phoneRegExp, 'Please enter a valid phone number.')
+    .required('Required'),
+  email: Yup.string()
+    .email('Please enter a valid email address.')
     .required('Required'),
   message: Yup.string().required('Required'),
 });
 
+// Run the makeValidate function...
 const validate = makeValidate(schema);
-
-const onSubmit = async (values) => {
-  const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
-  await sleep(300);
-  window.alert(JSON.stringify(values, 0, 2));
-};
+const required = makeRequired(schema);
 
 const formFields = [
   {
     size: 6,
     field: (
-      <TextField
-        label='Name'
-        name='name'
-        margin='none'
-        required={true}
-        showError={showErrorOnBlur}
-      />
-    ),
-  },
-  {
-    size: 6,
-    field: <TextField label='Company' name='company' margin='none' />,
-  },
-  {
-    size: 6,
-    field: (
-      <TextField
-        type='phone'
-        label='Phone Number'
-        name='phone'
-        margin='none'
-        required={true}
-        showError={showErrorOnBlur}
-      />
+      <Box
+        sx={{
+          display: 'flex',
+          alignItems: 'flex-start',
+        }}
+      >
+        <AccountBoxRoundedIcon
+          sx={{ color: 'action.active', mr: 1.25, my: 2.5 }}
+        />
+        <TextField
+          label='Name'
+          name='fullName'
+          margin='none'
+          required={required.fullName}
+        />
+      </Box>
     ),
   },
   {
     size: 6,
     field: (
-      <TextField
-        type='email'
-        label='Email Address'
-        name='email'
-        margin='none'
-        required={true}
-        showError={showErrorOnBlur}
-      />
+      <Box
+        sx={{
+          display: 'flex',
+          alignItems: 'flex-start',
+        }}
+      >
+        <BusinessCenterRoundedIcon
+          sx={{ color: 'action.active', mr: 1.25, my: 2.5 }}
+        />
+        <TextField label='Company' name='company' margin='none' />
+      </Box>
     ),
   },
-
+  {
+    size: 6,
+    field: (
+      <Box
+        sx={{
+          display: 'flex',
+          alignItems: 'flex-start',
+        }}
+      >
+        <LocalPhoneRoundedIcon
+          sx={{ color: 'action.active', mr: 1.25, my: 2.5 }}
+        />
+        <TextField
+          label='Phone Number'
+          name='phone'
+          margin='none'
+          required={required.phone}
+        />
+      </Box>
+    ),
+  },
+  {
+    size: 6,
+    field: (
+      <Box
+        sx={{
+          display: 'flex',
+          alignItems: 'flex-start',
+        }}
+      >
+        <EmailRoundedIcon sx={{ color: 'action.active', mr: 1.25, my: 2.5 }} />
+        <TextField
+          type='email'
+          label='Email Address'
+          name='email'
+          margin='none'
+          required={required.email}
+        />
+      </Box>
+    ),
+  },
   {
     size: 12,
     field: (
-      <TextField
-        required
-        name='message'
-        multiline
-        label='Message'
-        margin='none'
-      />
+      <Box sx={{ display: 'flex', alignItems: 'flex-start' }}>
+        <SubjectRoundedIcon
+          sx={{ color: 'action.active', mr: 1.25, my: 2.5 }}
+        />
+        <TextField
+          name='message'
+          multiline
+          label='Message'
+          margin='none'
+          required={required.message}
+        />
+      </Box>
     ),
   },
 ];
 
-export default function ContactUs() {
+export default function ContactWithValidation() {
+  const contactFormEmail = useRef();
+
+  const sendEmail = () => {
+    emailjs.sendForm(
+      'service_2su3vfl',
+      'template_jp3b8eb',
+      contactFormEmail.current,
+      'user_CzKqoI66CxRTLZGh20lAF'
+    );
+  };
+
+  const onSubmit = async (values) => {
+    const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+    await sleep(300);
+    sendEmail();
+    window.alert("Thank you! We'll be in touch!");
+    window.location.reload(false);
+  };
+
   return (
-    <div style={{ padding: 16, margin: 'auto', maxWidth: 600 }}>
+    <div style={{ marginTop: '12%', marginBottom: '12%' }}>
       <CssBaseline />
-      <Typography variant='h4' align='center' component='h1' gutterBottom>
-        Contact Us
+      <Typography
+        variant='h3'
+        align='center'
+        component='h1'
+        gutterBottom
+        style={{ marginBottom: '3%', fontFamily: 'Arima_Madurai' }}
+      >
+        Let's Work Together
       </Typography>
       <Form
         onSubmit={onSubmit}
         initialValues={{
-          Name: '',
-          Company: '',
-          Phone: '',
-          Email: '',
-          Message: '',
+          fullName: '',
+          company: '',
+          phone: '',
+          email: '',
+          message: '',
         }}
         validate={validate}
         render={({ handleSubmit, form, submitting, pristine, values }) => (
-          <form onSubmit={handleSubmit} noValidate>
-            <Paper style={{ padding: 16 }}>
-              <Grid container alignItems='flex-start' spacing={2}>
-                {formFields.map((item, idx) => (
-                  <Grid item xs={item.size} key={idx}>
-                    {item.field}
-                  </Grid>
-                ))}
-                <Grid item style={{ marginTop: 16 }}>
-                  <Button
-                    type='button'
-                    variant='contained'
-                    onClick={form.reset}
-                    disabled={submitting || pristine}
-                  >
-                    Reset
-                  </Button>
+          <form ref={contactFormEmail} onSubmit={handleSubmit} noValidate>
+            <Grid
+              container
+              display='flex'
+              alignItems='flex-start'
+              spacing={2}
+              justifyContent='center'
+            >
+              {formFields.map((item, idx) => (
+                <Grid item xs={item.size} key={idx}>
+                  {item.field}
                 </Grid>
-                <Grid item style={{ marginTop: 16 }}>
-                  <Button
-                    variant='contained'
-                    color='info'
-                    type='submit'
-                    disabled={submitting}
-                  >
-                    Submit
-                  </Button>
-                </Grid>
+              ))}
+              <Grid item lg={2} md={4} xs={4} style={{ marginTop: 20 }}>
+                <Button
+                  type='button'
+                  size='large'
+                  fullWidth
+                  style={{
+                    fontFamily: 'Aleo',
+                    fontSize: '1.2em',
+                    paddingTop: '2%',
+                    paddingBottom: '2%',
+                    borderRadius: '5px',
+                  }}
+                  variant='contained'
+                  color='text'
+                  onClick={form.reset}
+                  disabled={submitting || pristine}
+                >
+                  <ClearRoundedIcon /> Reset
+                </Button>
               </Grid>
-            </Paper>
+              <Grid
+                item
+                lg={2}
+                md={4}
+                xs={4}
+                style={{ marginTop: 20, marginLeft: '4%' }}
+              >
+                <Button
+                  variant='contained'
+                  size='large'
+                  fullWidth
+                  style={{
+                    fontFamily: 'Aleo',
+                    fontSize: '1.2em',
+                    paddingTop: '2%',
+                    paddingBottom: '2%',
+                    borderRadius: '5px',
+                  }}
+                  color='secondary'
+                  type='submit'
+                  disabled={submitting}
+                >
+                  <SendRoundedIcon style={{ marginRight: '10%' }} /> Send
+                </Button>
+              </Grid>
+            </Grid>
           </form>
         )}
       />
