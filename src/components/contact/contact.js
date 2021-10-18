@@ -1,4 +1,5 @@
-import React, { useRef } from 'react';
+import * as React from 'react';
+import { useRef } from 'react';
 import { Form } from 'react-final-form';
 import { makeRequired, makeValidate } from 'mui-rff';
 import * as Yup from 'yup';
@@ -10,7 +11,9 @@ import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import { TextField } from 'mui-rff';
-import { CssBaseline } from '@mui/material';
+import { CssBaseline, Paper } from '@mui/material';
+import Snackbar from '@mui/material/Snackbar';
+import MuiAlert from '@mui/material/Alert';
 
 //icons
 import BusinessCenterRoundedIcon from '@mui/icons-material/BusinessCenterRounded';
@@ -39,6 +42,10 @@ const schema = Yup.object().shape({
 // Run the makeValidate function...
 const validate = makeValidate(schema);
 const required = makeRequired(schema);
+
+const Alert = React.forwardRef(function Alert(props, ref) {
+  return <MuiAlert elevation={6} ref={ref} variant='filled' {...props} />;
+});
 
 const formFields = [
   {
@@ -139,6 +146,20 @@ const formFields = [
 ];
 
 export default function ContactWithValidation() {
+  const [open, setOpen] = React.useState(false);
+
+  const handleSnack = () => {
+    setOpen(true);
+  };
+
+  const handleClose = (event, reason) => {
+    if (reason === 'clickaway') {
+      return;
+    }
+
+    setOpen(false);
+  };
+
   const contactFormEmail = useRef();
 
   const sendEmail = () => {
@@ -154,12 +175,21 @@ export default function ContactWithValidation() {
     const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
     await sleep(300);
     sendEmail();
-    window.alert("Thank you! We'll be in touch!");
-    window.location.reload(false);
+    handleSnack();
+    setTimeout(function () {
+      window.location.reload(false);
+    }, 3000);
   };
 
   return (
-    <div style={{ marginTop: '12%', marginBottom: '12%' }}>
+    <Paper
+      style={{
+        marginTop: '12%',
+        marginBottom: '12%',
+        backgroundColor: 'rgba(255, 255, 255, 0.65)',
+        padding: '4%',
+      }}
+    >
       <CssBaseline />
       <Typography
         variant='h3'
@@ -225,6 +255,7 @@ export default function ContactWithValidation() {
                   variant='contained'
                   size='large'
                   fullWidth
+                  onClick={onSubmit}
                   style={{
                     fontFamily: 'Aleo',
                     fontSize: '1.2em',
@@ -238,11 +269,24 @@ export default function ContactWithValidation() {
                 >
                   <SendRoundedIcon style={{ marginRight: '10%' }} /> Send
                 </Button>
+                <Snackbar
+                  open={open}
+                  autoHideDuration={6000}
+                  onClose={handleClose}
+                >
+                  <Alert
+                    onClose={handleClose}
+                    severity='success'
+                    sx={{ width: '100%' }}
+                  >
+                    Message sent. We'll be in touch!
+                  </Alert>
+                </Snackbar>
               </Grid>
             </Grid>
           </form>
         )}
       />
-    </div>
+    </Paper>
   );
 }
