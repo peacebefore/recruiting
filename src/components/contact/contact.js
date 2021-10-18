@@ -255,7 +255,6 @@ export default function ContactWithValidation() {
                   variant='contained'
                   size='large'
                   fullWidth
-                  onClick={onSubmit}
                   style={{
                     fontFamily: 'Aleo',
                     fontSize: '1.2em',
