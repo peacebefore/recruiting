@@ -224,7 +224,7 @@ export default function ContactWithValidation() {
                   {item.field}
                 </Grid>
               ))}
-              <Grid item lg={2} md={4} xs={4} style={{ marginTop: 20 }}>
+              <Grid item lg={3} md={4} xs={5} style={{ marginTop: 20 }}>
                 <Button
                   type='button'
                   size='large'
@@ -246,9 +246,9 @@ export default function ContactWithValidation() {
               </Grid>
               <Grid
                 item
-                lg={2}
+                lg={3}
                 md={4}
-                xs={4}
+                xs={5}
                 style={{ marginTop: 20, marginLeft: '4%' }}
               >
                 <Button
