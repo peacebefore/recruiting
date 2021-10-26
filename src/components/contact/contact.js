@@ -98,7 +98,7 @@ const formFields = [
           sx={{ color: 'action.active', mr: 1.25, my: 2.5 }}
         />
         <TextField
-          label='Phone Number'
+          label='Phone'
           name='phone'
           margin='none'
           required={required.phone}
@@ -118,7 +118,7 @@ const formFields = [
         <EmailRoundedIcon sx={{ color: 'action.active', mr: 1.25, my: 2.5 }} />
         <TextField
           type='email'
-          label='Email Address'
+          label='Email'
           name='email'
           margin='none'
           required={required.email}
