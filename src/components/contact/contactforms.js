@@ -21,7 +21,7 @@ export default function ContactSection() {
         <Grid
           item
           style={{
-            width: '96%',
+            width: '80%',
           }}
         >
           <ContactWithValidation />
